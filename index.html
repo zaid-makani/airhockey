@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/png" href="./images/puck.png">
+
+    <title>Fun Hockey!</title>
+  </head>
+  <body>
+
+    <div id="start-game" class="modal">
+      <div class="container-center">
+        <h1>Fun Hockey!</h1>
+        <table class="controls">
+          <tr>
+            <td>▲</td>
+            <td>Up</td>
+          </tr>
+          <tr>
+            <td>▼</td>
+            <td>Down</td>
+          </tr>
+          <tr>
+            <td>◀</td>
+            <td>Left</td>
+          </tr>
+          <tr>
+            <td>▶</td>
+            <td>Right</td>
+          </tr>
+          <!-- <tr>
+            <td>Space</td>
+            <td>Speed</td>
+          </tr> -->
+          <tr>
+            <td>Enter</td>
+            <td>Pause</td>
+          </tr>
+        </table>
+        <p class="instructions">Press <strong>Enter</strong> to Start/Pause</p>
+        and
+        <p class="instructions">First to <strong>5</strong> points wins</p>
+        <p class="instructions"><strong>Good Luck!</strong></p>
+      </div>
+    </div>
+
+    <div id="title-bar" class="container-center hidden">
+
+      <pre class="fun-hockey">
+$$$$$$$$\                           $$\   $$\                     $$\                           $$\
+$$  _____|                          $$ |  $$ |                    $$ |                          $$ |
+$$ |      $$\   $$\ $$$$$$$\        $$ |  $$ | $$$$$$\   $$$$$$$\ $$ |  $$\  $$$$$$\  $$\   $$\ $$ |
+$$$$$\    $$ |  $$ |$$  __$$\       $$$$$$$$ |$$  __$$\ $$  _____|$$ | $$  |$$  __$$\ $$ |  $$ |$$ |
+$$  __|   $$ |  $$ |$$ |  $$ |      $$  __$$ |$$ /  $$ |$$ /      $$$$$$  / $$$$$$$$ |$$ |  $$ |\__|
+$$ |      $$ |  $$ |$$ |  $$ |      $$ |  $$ |$$ |  $$ |$$ |      $$  _$$<  $$   ____|$$ |  $$ |
+$$ |      \$$$$$$  |$$ |  $$ |      $$ |  $$ |\$$$$$$  |\$$$$$$$\ $$ | \$$\ \$$$$$$$\ \$$$$$$$ |$$\
+\__|       \______/ \__|  \__|      \__|  \__| \______/  \_______|\__|  \__| \_______| \____$$ |\__|
+                                                                                      $$\   $$ |
+                                                                                      \$$$$$$  |
+                                                                                       \______/
+      </pre>
+    </div>
+
+    <div class="hp-container">
+      <div class="player-orange">
+        <img src="./images/playerLeftOr.png" alt="Orange Hockey Player" />
+      </div>
+      <div class="computer-green">
+        <img src="./images/playerRightGr.png" alt="Green Hockey Player" />
+      </div>
+    </div>
+
+
+    <div class="text-block">
+      <div id="scoreboard" class="hidden">
+        <div class="player score">
+          <p>Player Score: <span id="player">0</span></p>
+        </div>
+        <div class="computer score">
+          <p>Computer Score: <span id="computer">0</span></p>
+        </div>
+      </div>
+    </div>
+
+    <a class="source" href="https://github.com/osmaelo/FunHockey">GitHub</a>
+
+    <div id="game-container" class="canvas-container hidden">
+      <div class="canvas">
+        <canvas id="game-canvas">Your browser doesn't support canvas.</canvas>
+      </div>
+    </div>
+
+    <div class="hp-mascots">
+      <div class="mascot-green">
+        <img src="./images/realcomp.png" alt="Green Mascot" />
+        <!-- <img src="http://placehold.it/350x500" alt="Green Mascot" /> -->
+      </div>
+      <div class="mascot-orange">
+        <img src="./images/realplayer.png" alt="Orange Mascot" />
+        <!-- <img src="http://placehold.it/350x500" alt="Green Mascot" /> -->
+      </div>
+    </div>
+
+
+    <div id="goal-scored" class="modal hidden">
+      <div class="container-center">
+        <h1><strong>Goal!</strong></h1>
+        <p class="instructions">Get ready, puck will start in a random direction.</p>
+        <p class="instructions">Another round will start in <strong><span id="timer"></span></strong>s!</p>
+      </div>
+    </div>
+
+    <div id="pause" class ="modal hidden">
+      <div class="container-center">
+        <h2>Paused. Press <strong>Enter</strong> to resume.</h2>
+      </div>
+    </div>
+
+    <div id="victory" class ="modal hidden">
+      <div class="container-center">
+        <h2>Congratulations to <strong><span id="winner"></span></strong> for winning the game!</h2>
+        <p class="instructions">Press <strong>C</strong> for 'continue' to start a new game</p>
+      </div>
+    </div>
+
+    <!-- CSS Decoration and Sprite action. -->
+
+    <!-- PostPone: Rounded Corners. Computer Defensive Movement. Boost for Player.  -->
+
+    <script src="vector.js"></script>
+    <script src="animate.js"></script>
+    <script src="rink.js"></script>
+    <script src="striker.js"></script>
+    <script src="player.js"></script>
+    <script src="computer.js"></script>
+    <script src="puck.js"></script>
+    <script src="game.js"></script>
+
+  </body>
+</html>
