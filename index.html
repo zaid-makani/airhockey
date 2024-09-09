@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" type="image/png" href="./images/puck.png">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/png" href="./images/puck.png" />
 
     <title>Fun Hockey!</title>
   </head>
   <body>
-
     <div id="start-game" class="modal">
       <div class="container-center">
         <h1>Fun Hockey!</h1>
@@ -45,9 +44,8 @@
       </div>
     </div>
 
-    <!-- <div id="title-bar" class="container-center hidden">
-
-      <pre class="fun-hockey">
+    <div id="title-bar" class="container-center hidden">
+      <!-- <pre class="fun-hockey">
 $$$$$$$$\                           $$\   $$\                     $$\                           $$\
 $$  _____|                          $$ |  $$ |                    $$ |                          $$ |
 $$ |      $$\   $$\ $$$$$$$\        $$ |  $$ | $$$$$$\   $$$$$$$\ $$ |  $$\  $$$$$$\  $$\   $$\ $$ |
@@ -59,8 +57,8 @@ $$ |      \$$$$$$  |$$ |  $$ |      $$ |  $$ |\$$$$$$  |\$$$$$$$\ $$ | \$$\ \$$$
                                                                                       $$\   $$ |
                                                                                       \$$$$$$  |
                                                                                        \______/
-      </pre>
-    </div> -->
+      </pre> -->
+    </div>
 
     <div class="hp-container">
       <div class="player-orange">
@@ -70,7 +68,6 @@ $$ |      \$$$$$$  |$$ |  $$ |      $$ |  $$ |\$$$$$$  |\$$$$$$$\ $$ | \$$\ \$$$
         <img src="./images/playerRightGr.png" alt="Green Hockey Player" />
       </div>
     </div>
-
 
     <div class="text-block">
       <div id="scoreboard" class="hidden">
@@ -100,25 +97,34 @@ $$ |      \$$$$$$  |$$ |  $$ |      $$ |  $$ |\$$$$$$  |\$$$$$$$\ $$ | \$$\ \$$$
       </div>
     </div>
 
-
     <div id="goal-scored" class="modal hidden">
       <div class="container-center">
         <h1><strong>Goal!</strong></h1>
-        <p class="instructions">Get ready, puck will start in a random direction.</p>
-        <p class="instructions">Another round will start in <strong><span id="timer"></span></strong>s!</p>
+        <p class="instructions">
+          Get ready, puck will start in a random direction.
+        </p>
+        <p class="instructions">
+          Another round will start in
+          <strong><span id="timer"></span></strong>s!
+        </p>
       </div>
     </div>
 
-    <div id="pause" class ="modal hidden">
+    <div id="pause" class="modal hidden">
       <div class="container-center">
         <h2>Paused. Press <strong>Enter</strong> to resume.</h2>
       </div>
     </div>
 
-    <div id="victory" class ="modal hidden">
+    <div id="victory" class="modal hidden">
       <div class="container-center">
-        <h2>Congratulations to <strong><span id="winner"></span></strong> for winning the game!</h2>
-        <p class="instructions">Press <strong>C</strong> for 'continue' to start a new game</p>
+        <h2>
+          Congratulations to <strong><span id="winner"></span></strong> for
+          winning the game!
+        </h2>
+        <p class="instructions">
+          Press <strong>C</strong> for 'continue' to start a new game
+        </p>
       </div>
     </div>
 
@@ -134,6 +140,5 @@ $$ |      \$$$$$$  |$$ |  $$ |      $$ |  $$ |\$$$$$$  |\$$$$$$$\ $$ | \$$\ \$$$
     <script src="computer.js"></script>
     <script src="puck.js"></script>
     <script src="game.js"></script>
-
   </body>
 </html>
